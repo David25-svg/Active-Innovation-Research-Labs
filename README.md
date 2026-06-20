@@ -8,4 +8,5 @@ Official website for Active Innovation Research Labs.
 
 ## GitHub Pages
 Create a repo named `active-innovation-research-labs`.
-Upload the files, then enable GitHub Pages in Settings > Pages.
+
+https://david25-svg.github.io/Active-Innovation-Research-Labs/
