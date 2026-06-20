@@ -226,19 +226,24 @@
   </footer>
 
   <script>
-    const html = document.documentElement;
-    const toggle = document.getElementById("themeToggle");
+    document.addEventListener("DOMContentLoaded", function () {
+      const html = document.documentElement;
+      const toggle = document.getElementById("themeToggle");
 
-    const savedTheme = localStorage.getItem("airl-theme") || "light";
-    html.setAttribute("data-theme", savedTheme);
-    toggle.textContent = savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+      function setTheme(theme) {
+        html.setAttribute("data-theme", theme);
+        localStorage.setItem("airl-theme", theme);
+        toggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+      }
 
-    toggle.addEventListener("click", () => {
-      const current = html.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-      html.setAttribute("data-theme", next);
-      localStorage.setItem("airl-theme", next);
-      toggle.textContent = next === "dark" ? "Light Mode" : "Dark Mode";
+      const savedTheme = localStorage.getItem("airl-theme");
+      setTheme(savedTheme || "light");
+
+      toggle.addEventListener("click", function () {
+        const currentTheme = html.getAttribute("data-theme");
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+      });
     });
   </script>
 </body>

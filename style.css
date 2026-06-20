@@ -19,17 +19,17 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #09130f;
-  --surface: #111f19;
-  --surface-2: #172921;
+  --bg: #07110d;
+  --surface: #101f18;
+  --surface-2: #162a21;
   --text: #f7f8f4;
   --muted: #c4ccc4;
   --accent: #8af0a8;
   --accent-2: #d6f05f;
-  --dark: #f7f8f4;
-  --dark-text: #09130f;
+  --dark: #050b08;
+  --dark-text: #f7f8f4;
   --border: rgba(247, 248, 244, 0.14);
-  --header: rgba(9, 19, 15, 0.92);
+  --header: rgba(7, 17, 13, 0.94);
 }
 
 html {
@@ -41,6 +41,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .site-header {
